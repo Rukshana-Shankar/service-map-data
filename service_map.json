@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "web123UI",
+      "name": "web123UI",
+      "type": "UI interface",
+      "services": [
+        "api2gateway service",
+        "payment red UI",
+        "venafi cert"
+      ]
+    },
+    {
+      "id": "pg2gres",
+      "name": "pg2gres",
+      "type": "DB server",
+      "services": [
+        "redlinuxdb"
+      ]
+    },
+    {
+      "id": "jboss123",
+      "name": "jboss123",
+      "type": "Middleware",
+      "services": [
+        "salesorder"
+      ]
+    },
+    {
+      "id": "apache45up",
+      "name": "apache45up",
+      "type": "Upstream",
+      "services": []
+    },
+    {
+      "id": "web1234UI",
+      "name": "web1234UI",
+      "type": "UI interface",
+      "services": []
+    },
+    {
+      "id": "ec2linux",
+      "name": "ec2linux",
+      "type": "Connector",
+      "services": []
+    },
+    {
+      "id": "venafi89",
+      "name": "venafi89",
+      "type": "Venafi Application",
+      "services": []
+    },
+    {
+      "id": "dow345er",
+      "name": "dow345er",
+      "type": "Downstream",
+      "services": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "web123UI",
+      "target": "pg2gres"
+    },
+    {
+      "source": "pg2gres",
+      "target": "jboss123"
+    },
+    {
+      "source": "jboss123",
+      "target": "apache45up"
+    },
+    {
+      "source": "web1234UI",
+      "target": "ec2linux"
+    },
+    {
+      "source": "ec2linux",
+      "target": "venafi89"
+    },
+    {
+      "source": "ec2linux",
+      "target": "dow345er"
+    }
+  ]
+}

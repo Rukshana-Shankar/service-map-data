@@ -1,0 +1,5 @@
+{
+  "name": "Service Mapping Diagram",
+  "description": "An interactive service mapping diagram for the 'Payment Red' business process, visualizing nodes, connections, and internal services using D3.js and React.",
+  "requestFramePermissions": []
+}
