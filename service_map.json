@@ -1,93 +1,21 @@
 {
   "nodes": [
-    {
-      "id": "web123UI",
-      "name": "web123UI",
-      "type": "UI interface",
-      "services": [
-        "api2gateway service",
-        "payment red UI",
-        "venafi cert"
-      ]
-    },
-    {
-      "id": "pg2gres",
-      "name": "pg2gres",
-      "type": "DB server",
-      "services": [
-        "redlinuxdb"
-      ]
-    },
-    {
-      "id": "jboss123",
-      "name": "jboss123",
-      "type": "Middleware",
-      "services": [
-        "salesorder"
-      ]
-    },
-    {
-      "id": "apache45up",
-      "name": "apache45up",
-      "type": "Upstream",
-      "services": []
-    },
-    {
-      "id": "web1234UI",
-      "name": "web1234UI",
-      "type": "UI interface",
-      "services": []
-    },
-    {
-      "id": "ec2linux",
-      "name": "ec2linux",
-      "type": "Connector",
-      "services": []
-    },
-    {
-      "id": "venafi89",
-      "name": "venafi89",
-      "type": "Venafi Application",
-      "services": []
-    },
-    {
-      "id": "dow345er",
-      "name": "dow345er",
-      "type": "Downstream",
-      "services": []
-    }
+    { "id": "web123UI", "name": "web123UI", "type": "UI interface", "services": ["api2gateway service", "payment red UI", "venafi cert"] },
+    { "id": "pg2gres", "name": "pg2gres", "type": "DB server", "services": ["redlinuxdb"] },
+    { "id": "jboss123", "name": "jboss123", "type": "Middleware", "services": ["salesorder"] },
+    { "id": "apache45up", "name": "apache45up", "type": "Upstream", "services": [] },
+    { "id": "web1234UI", "name": "web1234UI", "type": "UI interface", "services": [] },
+    { "id": "ec2linux", "name": "ec2linux", "type": "Connector", "services": [] },
+    { "id": "venafi89", "name": "venafi89", "type": "Venafi Application", "services": [] },
+    { "id": "dow345er", "name": "dow345er", "type": "Downstream", "services": [] }
   ],
   "edges": [
-    {
-      "from": "pg2gres",
-      "to": "web123UI",
-      "label": "depends on"
-    },
-    {
-      "from": "jboss123",
-      "to": "pg2gres",
-      "label": "depends on"
-    },
-    {
-      "from": "apache45up",
-      "to": "jboss123",
-      "label": "partially depends on"
-    },
-    {
-      "from": "ec2linux",
-      "to": "web1234UI",
-      "label": "depends on"
-    },
-    {
-      "from": "venafi89",
-      "to": "ec2linux",
-      "label": "partially depends on"
-    },
-    {
-      "from": "dow345er",
-      "to": "ec2linux",
-      "label": "depends on"
-    }
+    { "from": "web123UI", "to": "pg2gres", "label": "depends on" },
+    { "from": "pg2gres", "to": "jboss123", "label": "depends on" },
+    { "from": "jboss123", "to": "apache45up", "label": "partially depends on" },
+    { "from": "web1234UI", "to": "ec2linux", "label": "depends on" },
+    { "from": "ec2linux", "to": "venafi89", "label": "partially depends on" },
+    { "from": "ec2linux", "to": "dow345er", "label": "depends on" }
   ]
 }
 
