@@ -59,28 +59,35 @@
   ],
   "edges": [
     {
-      "source": "web123UI",
-      "target": "pg2gres"
+      "from": "pg2gres",
+      "to": "web123UI",
+      "label": "depends on"
     },
     {
-      "source": "pg2gres",
-      "target": "jboss123"
+      "from": "jboss123",
+      "to": "pg2gres",
+      "label": "depends on"
     },
     {
-      "source": "jboss123",
-      "target": "apache45up"
+      "from": "apache45up",
+      "to": "jboss123",
+      "label": "partially depends on"
     },
     {
-      "source": "web1234UI",
-      "target": "ec2linux"
+      "from": "ec2linux",
+      "to": "web1234UI",
+      "label": "depends on"
     },
     {
-      "source": "ec2linux",
-      "target": "venafi89"
+      "from": "venafi89",
+      "to": "ec2linux",
+      "label": "partially depends on"
     },
     {
-      "source": "ec2linux",
-      "target": "dow345er"
+      "from": "dow345er",
+      "to": "ec2linux",
+      "label": "depends on"
     }
   ]
 }
+
